@@ -1,35 +1,64 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [games, setGames] = useState([]);
+  const [title, setTitle] = useState("");
+  const [cover, setCover] = useState("");
+
+  const addGame = ({ title, cover }) => {
+    const id = Math.floor(Math.random() * 1000000);
+    const game = { id, title, cover };
+    setGames((state) => [...state, game]);
+  };
+
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+    addGame({ title, cover });
+    setTitle("");
+    setCover("");
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div id="app">
+      <h1>Biblioteca de Jogos</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="input-group">
+          <input
+            required=""
+            type="text"
+            name="text"
+            autoComplete="off"
+            className="input"
+            value={title}
+            onChange={({ target }) => setTitle(target.value)}
+          />
+          <label className="user-label">Título:</label>
+        </div>
+        <div className="input-group">
+          <input
+            required=""
+            type="text"
+            name="text"
+            autoComplete="off"
+            className="input"
+            value={cover}
+            onChange={({ target }) => setCover(target.value)}
+          />
+          <label className="user-label">Capa:</label>
+        </div>
+        <button type="submit">Adicionar à biblioteca</button>
+      </form>
+      <div className="games">
+        {games.map((game) => (
+          <div key={game.id}>
+            <img src={game.cover} alt="" />
+            <div>
+              <p>{game.title}</p>
+              <button>Remover</button>
+            </div>
+          </div>
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
-
-export default App
