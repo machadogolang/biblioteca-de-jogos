@@ -50,7 +50,7 @@ form {
 
 .buttonAdd:hover .button__icon {
   width: 100%;
-  transform: translateX(-0.37rem);
+  transform: translateX(-0.35rem);
 }
 
 @media screen and (max-width: 570px) {
@@ -64,6 +64,11 @@ form {
   }
 
   .buttonAdd .button__icon {
-    transform: translateX(100px);
+    transform: translateX(105px);
+  }
+
+  .buttonAdd:hover .button__icon {
+    width: 100%;
+    transform: translateX(-0.50rem);
   }
 }
