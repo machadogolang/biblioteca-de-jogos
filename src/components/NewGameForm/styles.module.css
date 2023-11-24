@@ -68,7 +68,6 @@ form {
   }
 
   .buttonAdd:hover .button__icon {
-    width: 100%;
-    transform: translateX(-0.50rem);
+    transform: translateX(-0.60rem);
   }
 }
