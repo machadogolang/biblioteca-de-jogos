@@ -62,4 +62,8 @@ form {
   .buttonAdd {
     margin-left: 1.5rem;
   }
+
+  .buttonAdd .button__icon {
+    transform: translateX(100px);
+  }
 }

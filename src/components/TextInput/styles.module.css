@@ -46,4 +46,8 @@
   .inputGroup {
     margin: 0;
   }
+
+  .userLabel {
+    right: 13.5rem;
+  }
 }
