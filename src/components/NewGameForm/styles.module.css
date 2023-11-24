@@ -1,0 +1,65 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.buttonAdd {
+  position: relative;
+  width: 9.5rem;
+  height: 2.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 0.4rem;
+  border-color: transparent;
+  background-color: #171717;
+  padding-right: 2rem;
+}
+
+.buttonAdd,
+.button__icon,
+.button__text {
+  transition: all 0.3s;
+}
+
+.buttonAdd .button__text {
+  color: #fff;
+  font-weight: 600;
+}
+
+.buttonAdd .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 2rem;
+  background-color: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+}
+
+.buttonAdd:hover {
+  background: #1a73e8;
+}
+
+.buttonAdd:hover .button__text {
+  color: transparent;
+}
+
+.buttonAdd:hover .button__icon {
+  width: 100%;
+  transform: translateX(-0.37rem);
+}
+
+@media screen and (max-width: 570px) {
+  form {
+    display: grid;
+    place-content: center;
+  }
+
+  .buttonAdd {
+    margin-left: 1.5rem;
+  }
+}

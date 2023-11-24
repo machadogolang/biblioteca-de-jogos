@@ -1,0 +1,43 @@
+.buttonRemove {
+  background-color: rgb(20, 20, 20);
+  cursor: pointer;
+  margin: 1.8rem 0 0 10.8rem;
+  transition-duration: 0.3s;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(46, 46, 46);
+  border-radius: 0.4rem;
+  padding: 0.6rem 0.8rem;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.buttonRemove:hover {
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+}
+
+.buttonRemove:hover .svgIcon {
+  width: 0.9rem;
+  transition-duration: 0.3s;
+}
+
+@media screen and (max-width: 570px) {
+  .contentGame {
+    display: grid;
+    place-content: center;
+  }
+
+  .buttonRemove {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -26,100 +26,6 @@ body {
   padding: 0 4rem;
 }
 
-form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.buttonAdd {
-  position: relative;
-  width: 9.5rem;
-  height: 2.8rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  border-radius: 0.4rem;
-  border-color: transparent;
-  background-color: #171717;
-  padding-right: 2rem;
-}
-
-.buttonAdd,
-.button__icon,
-.button__text {
-  transition: all 0.3s;
-}
-
-.buttonAdd .button__text {
-  color: #fff;
-  font-weight: 600;
-}
-
-.buttonAdd .button__icon {
-  position: absolute;
-  transform: translateX(109px);
-  height: 100%;
-  width: 2rem;
-  background-color: #212121;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.4rem;
-}
-
-.animate__fadeInDown {
-  animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 0.4s; /* don't forget to set a duration! */
-}
-
-.buttonAdd:hover {
-  background: #1a73e8;
-}
-
-.buttonAdd:hover .button__text {
-  color: transparent;
-}
-
-.buttonAdd:hover .button__icon {
-  width: 100%;
-  transform: translateX(-0.37rem);
-}
-
-.buttonRemove {
-  background-color: rgb(20, 20, 20);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition-duration: 0.3s;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(46, 46, 46);
-  border-radius: 0.4rem;
-  padding: 0.6rem 0.8rem;
-}
-
-.svgIcon {
-  width: 12px;
-  transition-duration: 0.3s;
-}
-
-.svgIcon path {
-  fill: white;
-}
-
-.buttonRemove:hover {
-  transition-duration: 0.3s;
-  background-color: rgb(255, 69, 69);
-  align-items: center;
-}
-
-.buttonRemove:hover .svgIcon {
-  width: 0.9rem;
-  transition-duration: 0.3s;
-}
-
 .games {
   display: flex;
   flex-wrap: wrap;
@@ -153,25 +59,20 @@ div > p {
   margin: 0;
 }
 
+.animate__fadeInDown {
+  animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.4s; /* don't forget to set a duration! */
+}
+
 @media screen and (max-width: 570px) {
   h1 {
     font-size: 1.8rem;
     text-align: center;
   }
 
-  .games,
-  .contentGame,
-  form {
+  .games {
     display: grid;
     place-content: center;
-  }
-
-  .inputGroup {
-    margin: 0;
-  }
-
-  .buttonAdd {
-    margin-left: 1.5rem;
   }
 
   .games > div {
