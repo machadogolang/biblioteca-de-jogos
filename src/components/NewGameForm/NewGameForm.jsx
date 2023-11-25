@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Input from "../TextInput/Input";
 import PropTypes from "prop-types";
+// Importação das notificações.
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./styles.module.css";
