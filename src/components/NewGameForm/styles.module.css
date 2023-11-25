@@ -30,7 +30,7 @@ form {
 
 .buttonAdd .button__icon {
   position: absolute;
-  transform: translateX(109px);
+  transform: translateX(110px);
   height: 100%;
   width: 2rem;
   background-color: #212121;
@@ -60,14 +60,6 @@ form {
   }
 
   .buttonAdd {
-    margin-left: 1.9rem;
-  }
-
-  .buttonAdd .button__icon {
-    transform: translateX(105px);
-  }
-
-  .buttonAdd:hover .button__icon {
-    transform: translateX(-0.67rem);
+    margin-left: 1.8rem;
   }
 }
